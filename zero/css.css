@@ -1,0 +1,67 @@
+﻿.dashboard {
+    margin: 1px;
+    width:100%;
+    background: rgb(255, 255, 244);
+    height:580px;
+    position:absolute;
+  }
+
+.addnodebutn{
+  background:"green";
+}
+.toolbar {
+
+  width:100%;
+  background: rgb(255, 255, 255);
+
+
+}
+.contnent{
+
+  width:100%;
+  background: rgb(255, 255, 255);
+}
+
+.backsvg {
+
+  width:70%;
+  background: rgb(255, 255, 255);
+
+
+
+  height:560px;
+  float:left;
+
+}
+
+.backattr {
+
+  width:15%;
+  background: rgb(123, 251, 211);
+  height:560px;
+  float:left;
+
+}
+.inform {
+  margin: 1px;
+  width:100%;
+  background: rgb(223, 225, 227);
+  height:20px;
+  float:left;
+
+}
+button {
+  padding: 10px 20px;
+}
+.node {
+  stroke: #999;
+  stroke-width: 1.5px;
+}
+
+.node.selected {
+  stroke: #ff5b51;
+}
+
+.link {
+  stroke: #999;
+}

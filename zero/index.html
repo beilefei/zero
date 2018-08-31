@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+
+
+<html>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+
+<body>
+
+<script src="./one_files/d3.v4.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+ 
+
+
+
+<div class="dashboard"  id="app">
+
+
+
+<div class="backsvg" id="panel" ref="backpanel" >
+
+
+
+
+</div>
+<div class="head" id="head" ref="backpanel" >
+
+    <div class="menu"  >
+
+    <svg class="submenusvg" id="home" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+<g><path id="path1"  style="fill:#CDCFC9"   d="M811,10H188L10,316.2c0,0,0,105,0,122.5c0,32.6,11.7,68.3,30.7,91.9l0.9,336.9c0,67.7,56.6,122.5,126.3,122.5h663.2c69.8,0,128.3-54.9,128.3-122.5V530.6c21.4-25.2,30.6-51.1,30.6-91.9c0-33.5,0-122.5,0-122.5L811,10z M898.1,708v37v61.3V842v25.5c0,33.8-32.2,61.3-67.1,61.3H167.9c-34.9,0-65.9-27.4-65.9-61.3V842h0V709.8l-0.1-148.6H162c32.9,0,85.1-29.3,107.1-74.2c24.8,43.6,71,74.2,115.2,74.2c46.7,0,98-27.8,115.2-67.9c17.2,39.1,67.4,67.9,113.1,67.9c45.3,0,92.3-33.3,116-78.8c27.8,45.9,50.2,78.8,108.2,78.8c9,0,53.4,1.5,61.3,0L898.1,708L898.1,708z M928.8,438.8c-0.4,42.3-49.2,61.3-91.9,61.2c-49.2,0-93.6-29.8-93.6-61.2h-28.9c0,30.9-54.8,61.2-102.1,61.2c-45.3,0-98-31.3-98-61.2h-29.7c0,30.9-53.6,61.2-98.9,61.2c-47.2,0-101.1-21.7-101.1-61.2h-29c0,30.8-47.3,62.2-92.7,62.2c-46.1,0-91.7-19.9-91.7-62.2v-61.3h857.5V438.8L928.8,438.8z M72.5,316.2l142.7-245h568.8l145.7,245H72.5z"/></g>
+</svg>
+        <div class="submenutext">  首页 </div>
+</div>
+
+
+    <div class="menu"  >
+
+<svg class="submenusvg" id="meeting"version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+<g><path  id="path2" style="fill:#CDCFC9"d="M710,220c0,116-94,210-210,210c-116,0-210-94-210-210c0-116,94-210,210-210C616,10,710,104,710,220z M920,990c0-280-213.4-490-420-490C293.4,500,80,710,80,990H920z"/></g>
+</svg>
+        <div class="submenutext">  会议预定 </div>
+    </div>
+
+    <div class="menu"  >
+<svg class="submenusvg" id="motor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+<g><path  id="path3" style="fill:#CDCFC9" d="M892.1,800.6h-9.1c-20.2-57.6-74.2-99.2-137.9-99.2c-63.9,0-117.5,41.6-138,99.2H442c-20.4-57.6-74.1-99.2-138-99.2c-63.9,0-117.6,41.6-138.1,99.2h-57.9v-49.5c0-54.7,43.9-99.1,97.9-99.1h682c2.2,16.3,4.1,32.7,4.1,49.5L892.1,800.6L892.1,800.6z M745,899.7c-27,0-49-22.3-49-49.6c0-27.3,22-49.5,49-49.5c27,0,49.1,22.3,49.1,49.5C794.1,877.4,772.1,899.7,745,899.7L745,899.7z M304.1,899.7c-27,0-48.9-22.3-48.9-49.6c0-27.3,21.9-49.5,48.9-49.5c26.9,0,48.9,22.3,48.9,49.5C352.9,877.4,331,899.7,304.1,899.7L304.1,899.7z M500,359.6v193.2H309C328.6,455.9,404.1,379.4,500,359.6L500,359.6z M858.3,552.8H598V358.6C713.3,375.4,809.9,450.1,858.3,552.8L858.3,552.8z M116.4,172.5c25.8-15.8,47.1-38.5,61.8-65.6c14.7,27.1,35.9,49.8,61.6,65.6c-25.7,15.8-47,38.6-61.6,65.8C163.5,211.2,142.3,188.3,116.4,172.5z M59.3,194.3c-9.2,1.6-18.9,2.5-28.7,2.5c-11.2,0-20.6-9.5-20.6-21.2c0-1,0.2-2,0.2-3.1c0-0.9-0.2-1.9-0.2-2.8c0-11.8,9.4-21.4,20.6-21.4c9.8,0,19.5,1,28.7,2.6c52.9-12.6,93-59.1,98.2-116c-0.3-4-0.5-8.2-0.5-12.2c0-11.7,9.4-21.3,20.5-21.3c0.3,0,0.4,0.1,0.6,0.1c0.1,0,0.3-0.1,0.4-0.1c11.4,0,20.7,9.6,20.7,21.3c0,4-0.2,8.2-0.4,12.2c5.2,56.9,45.4,103.4,98.2,116c9.2-1.6,18.9-2.6,28.8-2.6c11.2,0,20.5,9.6,20.5,21.4c0,1-0.1,2-0.1,2.8c0,1,0.1,2,0.1,3.1c0,11.8-9.3,21.2-20.5,21.2c-9.9,0-19.5-0.9-28.8-2.5c-52.8,12.5-93,59.2-98.2,116c0.3,4,0.4,8.1,0.4,12.2c0,11.8-9.3,21.2-20.7,21.2c-0.1,0-0.3,0-0.4,0c-0.2,0-0.4,0-0.6,0c-11.1,0-20.5-9.5-20.5-21.2c0-4.2,0.2-8.2,0.5-12.2C152.3,253.5,112.1,206.8,59.3,194.3L59.3,194.3z M549.1,255.5c-172.6,0-315.6,129.4-339.6,297.3H206C98.1,552.8,10,641.6,10,751v99.1c0,27.4,22,49.6,49,49.6h107c20.4,57.5,74.1,99,138.1,99c63.9,0,117.5-41.5,138-99h165c20.4,57.5,74.1,99,138,99c63.7,0,117.7-41.5,137.9-99h58.2c26.9,0,48.8-22.2,48.8-49.6V701.3C990,455.7,792.1,255.5,549.1,255.5L549.1,255.5z"/></g>
+</svg>
+        <div class="submenutext">  车辆预定 </div>
+
+    </div>
+
+    <div class="menu"  >
+<svg class="submenusvg" id="dinner" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+<g><path id="path4" style="fill:#CDCFC9" d="M483.4,207.5c-61.8,61.8-44.1,136.8-66.2,216.3L81.7,83.9c-8.8-8.8-17.7-13.2-30.9-13.2c-22.1,0-39.7,17.7-39.7,39.7v13.2c0,123.6,53,348.7,216.3,529.7L33.2,847.6c-30.9,30.9-30.9,83.9,0,114.8c30.9,30.9,83.9,30.9,114.8,0l194.2-194.2L457,883l101.5-92.7L726.2,958c30.9,30.9,83.9,30.9,114.8,0s30.9-83.9,0-114.8L576.1,573.9c75-22.1,154.5-4.4,216.3-66.2l181-181c22.1-22.1,22.1-53,0-70.6c-22.1-22.1-53-22.1-70.6,0L743.9,415c-13.2,13.2-30.9,13.2-44.1,0c-13.2-13.2-13.2-30.9,0-44.1L858.7,212c22.1-22.1,22.1-53,0-70.6c-22.1-22.1-53-22.1-70.6,0L629.1,300.2c-13.2,13.2-30.9,13.2-44.1,0c-13.2-13.2-13.2-30.9,0-44.1l154.5-154.5c22.1-22.1,22.1-53,0-70.6c-22.1-22.1-53-22.1-70.6,0L483.4,207.5z"/></g>
+</svg>
+    <div class="submenutext" color="#CDCFC9"> 用餐预定 </div>
+
+</div>
+    <div class="menu"  >
+
+<svg class="submenusvg" id="vote"version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+<g><path id="path5" style="fill:#CDCFC9"d="M990,410.2c-44.6,7.4-106.2,42.2-170.4,88.6v399.3H10V101.9h809.6v170.6c47.7-34.7,100-65.2,156.7-86.8C969.4,262.2,942,328.6,990,410.2z M71.3,163.1v673.7H745V556.6c-89.3,74-173.5,159.6-214.7,215.8C413.7,665.3,276.5,583.6,180.4,558.1l226.5-102l109.7,158.2c0,0,84.3-151.9,228.4-281.7V163.1H71.3z"/></g>
+</svg>
+        <div class="submenutext">  投票留言 </div>
+
+    </div>
+
+
+</div>
+
+ </div>
+
+
+
+<script>
+    
+
+
+new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!',
+            winwidth:document.body.clientWidth,
+            winheigth:document.body.clientHeigth,
+            g:null,
+            title:"首页",
+            selected:false,
+            menu:{
+                home:{name:"首页",selected:true},
+                meeting:{name:"会议预定",selected:false},
+                motor:{name:"车辆预定",selected:false},
+                dinner:{name:"用餐预定",selected:false},
+                vote:{name:"投票",selected:false},
+
+            },
+            submenu:{
+                home:[{id:"shenqing",selected:false,url:"check.svg"},{id:"shengpi",selected:false,url:"check.svg"},{id:"chaxun",selected:false,url:"check.svg"}],
+                meeting:[{id:"shenqing",selected:false},{id:"shengpi",selected:false},{id:"chaxun",selected:false}],
+                motor:[{id:"shenqing",selected:false},{id:"shengpi",selected:false},{id:"chaxun",selected:false}],
+                dinner:[{id:"shenqing",selected:false},{id:"shengpi",selected:false},{id:"chaxun",selected:false}],
+                vote:[{id:"shenqing",selected:false},{id:"shengpi",selected:false},{id:"chaxun",selected:false}],
+            },
+        },
+        mounted:function(){
+           var that=this;
+            that.loadshtml("http://www.chd.com.cn/");
+
+            d3.select("#home").on("click",function(d) {
+                var these=this;
+
+                if(!that.menu.home.selected){
+                    that.loadshtml("http://www.chd.com.cn/");
+                    that.menu.home.selected=! that.menu.home.selected;
+                }
+
+                that.menu.home.selected && that.onlytrue('home');
+                that.menucolor();
+            });
+
+
+            d3.select("#meeting").on("click",function(d) {
+                var these=this;
+
+                if(!that.menu.meeting.selected){
+                    that.menu.meeting.selected=! that.menu.meeting.selected;
+                    that.loadshtml("meeting.html");
+
+                }
+
+                that.menu.meeting.selected && that.onlytrue('meeting');
+                that.menucolor();
+            });
+
+            d3.select("#motor").on("click",function(d) {
+                var these=this;
+
+                if(!that.menu.motor.selected)
+                    that.menu.motor.selected=! that.menu.motor.selected;
+                that.menu.motor.selected && that.onlytrue('motor');
+                that.menucolor();
+            });
+            d3.select("#dinner").on("click",function(d) {
+                var these=this;
+
+                if(!that.menu.dinner.selected)
+                    that.menu.dinner.selected=! that.menu.dinner.selected;
+                that.menu.dinner.selected && that.onlytrue('dinner');
+                that.menucolor();
+            });
+
+            d3.select("#vote").on("click",function(d) {
+                var these=this;
+
+                if(!that.menu.vote.selected){
+                    that.menu.vote.selected=! that.menu.vote.selected;
+                    ///////////////////弹出子菜单embed
+                    that.g = d3.select("#panel")
+                            .selectAll("svg")
+                            .data(that.submenu.home)
+                            .enter()
+                            .append('svg')
+                            .attr("float", "left")
+                            .attr("width", '25%')
+                            .attr("id",  function(d) {
+                                return d.id;
+                            })
+
+
+
+                          ;
+
+
+
+
+                }
+
+                that.menu.vote.selected && that.onlytrue('vote');
+                that.menucolor();
+            });
+            that.menucolor();
+
+
+
+
+
+
+
+        },
+       methods:{
+
+           loadshtml:function(url){
+               document.getElementById("panel").innerHTML = ('<object type="text/html" data='+'"'+url+ '" '+ ' width="100%" height="100%"> </object>');
+           },
+
+           newlinks:function(str){
+               window.location.href=str;
+
+           },
+
+
+
+           menucolor:function(){
+             var that=this;
+               that.menu.home.selected && d3.select("#path1").attr("style","fill:#FFFF00;") || d3.select("#path1").attr("style","fill:#CDCFC9;");
+               that.menu.meeting.selected && d3.select("#path2").attr("style","fill:#FFFF00;") || d3.select("#path2").attr("style","fill:#CDCFC9;");
+               that.menu.motor.selected && d3.select("#path3").attr("style","fill:#FFFF00;") || d3.select("#path3").attr("style","fill:#CDCFC9;");
+               that.menu.dinner.selected && d3.select("#path4").attr("style","fill:#FFFF00;") || d3.select("#path4").attr("style","fill:#CDCFC9;");
+               that.menu.vote.selected && d3.select("#path5").attr("style","fill:#FFFF00;") || d3.select("#path5").attr("style","fill:#CDCFC9;");
+
+               },
+           onlytrue:function(str){
+               var that=this;
+               for (key in that.menu){
+                   that.menu[key].selected=false;
+               }
+               that.menu[str].selected=true;
+
+               that.title= that.menu[str].name;
+
+           },
+
+
+           },
+
+
+
+
+
+
+        
+
+
+
+
+    })
+
+
+</script>
+
+
+ 
+
+
+
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+.dashboard {
+    width:99%;
+    background: rgb(255, 255, 244);
+    height:98%;
+    position:absolute;
+  }
+.head {
+    width:100%;
+    height:20%;
+
+    background: rgb(49, 53, 90);
+ float:left;
+   
+  }
+.head1 {
+    width:100%;
+    height:10%;
+    text-align:center;
+    background: rgb(255, 255, 255);
+    float:left;
+
+}
+
+.menu {
+    width:20%;
+    height:100%;
+      
+    float:left;
+    text-align:center;
+
+}
+
+
+.submenu {
+    width:24%;
+    margin:2px 2px 2px 2px;
+    background-color: #d9fff5;
+    float:left;
+
+
+}
+
+.submenusvg {
+    height:80%;
+
+
+}
+
+.submenutext {
+    width:100%;
+    text-align:center;
+
+
+}
+.submenu:hover{ background-color: #261cff;}
+
+.menu:active{ background-color:yellow;}
+.menu:hover{ background-color: #e6ffdb;}
+
+
+
+
+.addnodebutn{
+  background:"green";
+}
+
+.contnent{
+
+  width:100%;
+  background: rgb(255, 255, 255);
+}
+
+.backsvg {
+
+  width:100%;
+  background: rgb(255, 255, 255);
+height:80%;
+
+
+  
+  float:left;
+
+}
+
+.backattr {
+
+  width:15%;
+  background: rgb(123, 251, 211);
+  height:560px;
+  float:left;
+
+}
+.inform {
+  margin: 1px;
+  width:100%;
+  background: rgb(223, 225, 227);
+  height:20px;
+  float:left;
+
+}
+button {
+  padding: 10px 20px;
+}
+.node {
+  stroke: #999;
+  stroke-width: 1.5px;
+}
+
+.node.selected {
+  stroke: #ff5b51;
+}
+
+.link {
+  stroke: #999;
+}
+</style>
+
+</body></html>
